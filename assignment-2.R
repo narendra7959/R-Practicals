@@ -1,3 +1,6 @@
+# 
+
+
 # if else statement
 
 number <- 10
@@ -167,3 +170,47 @@ str <- "Hello, world!"
 sub_str <- substring(str, 1, 5)  
 print(sub_str) 
 
+
+# pie chart
+x <- c(25, 35, 20, 20)
+labels <- c("Category A", "Category B", "Category C", "Category D")
+pie(x, labels = labels, main = "Simple Pie Chart", col = rainbow(length(x)))
+
+# bar chart
+x <- c(25, 35, 20, 20)
+# Labels for the bars
+labels <- c("Category A", "Category B", "Category C", "Category D")
+barplot(x, names.arg = labels, main = "Simple Bar Chart", col = rainbow(length(x)), xlab = "Categories", ylab = "Values")
+
+
+# scatter plot
+x <- c(1, 2, 3, 4) 
+y <- c(25, 35, 20, 20) 
+# Labels for the points
+labels <- c("Category A", "Category B", "Category C", "Category D")
+# Create the scatter plot
+plot(x, y, main = "Simple Scatter Plot", xlab = "Categories", ylab = "Values", 
+     pch = 19, col = rainbow(length(x)), xaxt = "n")
+# Add custom x-axis labels
+axis(1, at = x, labels = labels)
+
+
+# histogram
+set.seed(123)
+values <- rnorm(1000, mean = 50, sd = 10)
+
+# Create histogram
+hist(values, breaks = 20, col = "skyblue", border = "black",
+     main = "Histogram of Values", xlab = "Value", ylab = "Frequency")
+
+set.seed(123)
+time <- 1:100
+value <- cumsum(rnorm(100)) # Cumulative sum of random values
+
+# line chart
+set.seed(123)
+time <- 1:100
+value <- cumsum(rnorm(100)) # Cumulative sum of random values
+
+plot(time, value, type = "l", col = "blue", lwd = 2,
+     main = "Line Chart of Random Data", xlab = "Time", ylab = "Value")
